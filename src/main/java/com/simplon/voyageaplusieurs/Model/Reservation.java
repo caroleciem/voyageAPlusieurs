@@ -1,7 +1,5 @@
 package com.simplon.voyageaplusieurs.Model;
 
-import org.springframework.data.annotation.Id;
-
 import javax.persistence.*;
 import java.util.Date;
 
@@ -10,16 +8,10 @@ import java.util.Date;
 public class Reservation {
 
     @Id
-    @SequenceGenerator(name = "reservation_seq_id", allocationSize = 1)
+    @SequenceGenerator(name="reservation_seq_id", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reservation_seq_id")
     private Long id;
 
-    @Column(nullable = false)
-    private Trip trip;
-
-     @ManyToOne
-
-    private Group group;
 
     @Column(nullable = false)
     private String bedRoomNumber;
@@ -32,38 +24,11 @@ public class Reservation {
 
     @Column()
     private PensionType pensionType;
+    @OneToOne
+    private Trip trip;
 
+    @ManyToOne
+    private GroupM groupM;
 
-
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public Trip getTrip() {
-        return trip;
-    }
-
-    public Group getGroup() {
-        return group;
-    }
-
-
-    public String getBedRoomNumber() {
-        return bedRoomNumber;
-    }
-
-
-    public double getGlobalPrice() {
-        return globalPrice;
-
-    }
-
-
-    public Date getDate() {
-        return date;
-
-    }
 
 }
