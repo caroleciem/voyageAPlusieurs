@@ -2,6 +2,8 @@ package com.simplon.voyageaplusieurs.Model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
@@ -24,6 +26,10 @@ public class Reservation {
 
     @Column()
     private PensionType pensionType;
+
+    @OneToMany(mappedBy = "reservation")
+    Set<Payment> paymentSet = new HashSet<>();
+
     @OneToOne
     private Trip trip;
 
