@@ -1,5 +1,7 @@
 package com.simplon.voyageaplusieurs.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,6 +15,7 @@ public class Trip {
     private Double pricePerPers;
     private Integer duration;
     private String descriptiveRestauration;
+    @JsonIgnore
     @ManyToOne
     private Destination destination;
     @ManyToMany
