@@ -2,10 +2,7 @@ package com.simplon.voyageaplusieurs.Controller;
 
 import com.simplon.voyageaplusieurs.Model.Destination;
 import com.simplon.voyageaplusieurs.Service.DestinationService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -13,6 +10,7 @@ import java.util.List;
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class DestinationController {
+
     private DestinationService destinationService;
     public DestinationController(DestinationService destinationService){
         this.destinationService = destinationService;
@@ -23,4 +21,11 @@ public class DestinationController {
         return (this.destinationService.getDestinations());
 
     }
+    /*@GetMapping("/filter")
+    public List<Destination> getDestinationsSelect(@RequestParam String country){
+        return (this.destinationService.getDestinationsSelect(country));
+
+    }
+    */
+
 }

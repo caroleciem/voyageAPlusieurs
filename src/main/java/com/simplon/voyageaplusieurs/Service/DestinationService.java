@@ -13,4 +13,11 @@ public interface DestinationService {
      * @return the complete list from persistence layer.
      */
     List<Destination> getDestinations();
+
+    /**
+     * Get the list of Destinations filtered on country and duration
+     * @return the  list filtered from persistence layer.
+
+    List<Destination> getDestinationsSelect(String country);
+    */
 }
