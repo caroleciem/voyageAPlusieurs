@@ -21,11 +21,11 @@ public class DestinationController {
         return (this.destinationService.getDestinations());
 
     }
-    /*@GetMapping("/filter")
+    @GetMapping("/filter")
     public List<Destination> getDestinationsSelect(@RequestParam String country){
         return (this.destinationService.getDestinationsSelect(country));
 
     }
-    */
+
 
 }
