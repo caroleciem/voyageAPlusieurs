@@ -13,4 +13,7 @@ public class Payment {
 
     @Column(nullable = false)
     private Double amount;
+
+    @ManyToOne
+    private Person person;
 }

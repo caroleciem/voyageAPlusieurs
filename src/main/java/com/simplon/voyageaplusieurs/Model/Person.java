@@ -1,7 +1,9 @@
 package com.simplon.voyageaplusieurs.Model;
+import java.util.ArrayList;
 import java.util.HashSet;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -41,5 +43,16 @@ public class Person {
             inverseJoinColumns = @JoinColumn(name="role_id")
     )
     private Set<Role> roleSet= new HashSet();
+
+    @ManyToMany
+    @JoinTable(
+        name = "person_group",
+        joinColumns = @JoinColumn(name="person_id"),
+        inverseJoinColumns = @JoinColumn(name="group_id")
+    )
+    private Set<GroupM> groupList = new HashSet<GroupM>();
+
+    @OneToMany(mappedBy = "person")
+    Set<Payment> personPaymentSet = new HashSet<>();
 }
 

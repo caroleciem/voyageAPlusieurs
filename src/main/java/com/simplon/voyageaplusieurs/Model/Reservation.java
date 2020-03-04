@@ -14,7 +14,6 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reservation_seq_id")
     private Long id;
 
-
     @Column(nullable = false)
     private String bedRoomNumber;
 
@@ -35,6 +34,4 @@ public class Reservation {
 
     @ManyToOne
     private GroupM groupM;
-
-
 }
