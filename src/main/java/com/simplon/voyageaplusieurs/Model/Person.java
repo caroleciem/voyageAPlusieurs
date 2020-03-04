@@ -45,6 +45,18 @@ public class Person {
     )
     private Set<Role> roleSet= new HashSet();
 
+    @ManyToMany
+    @JoinTable(
+            name = "person_group",
+            joinColumns = @JoinColumn(name="person_id"),
+            inverseJoinColumns = @JoinColumn(name="group_id")
+    )
+    private Set<GroupM> groupList = new HashSet<GroupM>();
+
+    @OneToMany(mappedBy = "person")
+    Set<Payment> personPaymentSet = new HashSet<>();
+
+
     public Long getId() {
         return id;
     }
@@ -149,5 +161,6 @@ public class Person {
     public void setCountry(String country) {
         this.country = country;
     }
+
 }
 
