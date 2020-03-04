@@ -15,6 +15,7 @@ public class PersonController {
     }
     @PostMapping
     public ResponseEntity<Person> createPerson(@RequestBody Person personToCreate) {
+        System.out.println(personToCreate);
         Person savedPerson = personService.createPerson(personToCreate);
         return ResponseEntity.ok(savedPerson);
     }
