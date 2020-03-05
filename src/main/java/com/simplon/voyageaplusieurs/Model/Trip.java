@@ -15,55 +15,6 @@ public class Trip {
     private Double pricePerPers;
     private Integer duration;
     private String descriptiveRestauration;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Double getPricePerPers() {
-        return pricePerPers;
-    }
-
-    public void setPricePerPers(Double pricePerPers) {
-        this.pricePerPers = pricePerPers;
-    }
-
-    public Integer getDuration() {
-        return duration;
-    }
-
-    public void setDuration(Integer duration) {
-        this.duration = duration;
-    }
-
-    public String getDescriptiveRestauration() {
-        return descriptiveRestauration;
-    }
-
-    public void setDescriptiveRestauration(String descriptiveRestauration) {
-        this.descriptiveRestauration = descriptiveRestauration;
-    }
-
-    public Destination getDestination() {
-        return destination;
-    }
-
-    public void setDestination(Destination destination) {
-        this.destination = destination;
-    }
-
-    public Set<Pension> getPensions() {
-        return pensions;
-    }
-
-    public void setPensions(Set<Pension> pensions) {
-        this.pensions = pensions;
-    }
-
     @JsonIgnore
     @ManyToOne
     private Destination destination;

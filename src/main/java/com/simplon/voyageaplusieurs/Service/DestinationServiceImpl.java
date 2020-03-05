@@ -22,12 +22,12 @@ public class DestinationServiceImpl implements DestinationService {
         return destinationRepository.findAll();
 
     }
-
+    /*
     @Override
     public List<Destination> getDestinationsSelect(String country) {
         return destinationRepository.findAllByCountry(country);
 
     }
-
+    */
 
 }
