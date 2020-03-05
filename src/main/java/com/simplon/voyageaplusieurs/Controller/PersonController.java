@@ -5,6 +5,9 @@ import com.simplon.voyageaplusieurs.Service.PersonService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLOutput;
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/person")
 @CrossOrigin(origins = "*")

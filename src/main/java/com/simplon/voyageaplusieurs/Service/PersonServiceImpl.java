@@ -4,6 +4,8 @@ import com.simplon.voyageaplusieurs.Model.Person;
 import com.simplon.voyageaplusieurs.Repository.PersonRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class PersonServiceImpl implements PersonService {
@@ -21,4 +23,11 @@ public class PersonServiceImpl implements PersonService {
 
             return personRepository.save(personToCreate);
     }
+
+    @Override
+    public Person findPersonFromPaymentId(Long paymentId) {
+        Person person = new Person(); //TODO to remove and replace by implementing the query & function
+        return person;
+    }
+
 }

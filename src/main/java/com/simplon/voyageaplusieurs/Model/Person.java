@@ -56,6 +56,13 @@ public class Person {
     @OneToMany(mappedBy = "person")
     Set<Payment> personPaymentSet = new HashSet<>();
 
+    @ManyToMany
+    @JoinTable(
+            name = "person_reservation",
+            joinColumns = @JoinColumn(name="person_id"),
+            inverseJoinColumns = @JoinColumn(name="reservation_id")
+    )
+    private Set<Reservation> personReservationSet = new HashSet<>();
 
     public Long getId() {
         return id;
