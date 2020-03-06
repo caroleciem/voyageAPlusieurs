@@ -3,6 +3,7 @@ package com.simplon.voyageaplusieurs.Model;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -17,6 +18,9 @@ public class GroupM {
     private List<Reservation> reservations = new ArrayList<>();
 
     @ManyToMany
+<<<<<<< HEAD
+    private Set<Person> people = new HashSet<>();
+=======
     @JoinTable(
             name = "Person",
             joinColumns = @JoinColumn(name = "groupm_id"),
@@ -45,4 +49,5 @@ public class GroupM {
     }
 
 
+>>>>>>> master
 }
