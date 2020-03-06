@@ -43,16 +43,16 @@ public class Person {
             inverseJoinColumns = @JoinColumn(name="role_id")
     )
     private Set<Role> roleSet= new HashSet();
-/*
+
     @ManyToMany
     @JoinTable(
             name = "groupm",
             joinColumns = @JoinColumn(name="person_id"),
             inverseJoinColumns = @JoinColumn(name="groupm_id")
     )
-    /*
+    
     private List<GroupM> groupms = new ArrayList<>();
-*/
+
 
 }
 
