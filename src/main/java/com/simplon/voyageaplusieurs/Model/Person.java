@@ -10,7 +10,7 @@ import java.util.Set;
 @Entity
 public class Person {
     @Id
-    @SequenceGenerator(name="person_seq_id", allocationSize = 1)
+    @SequenceGenerator(name = "person_seq_id", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "person_seq_id")
     private Long id;
 
@@ -43,10 +43,29 @@ public class Person {
     @ManyToMany
     @JoinTable(
             name = "person_role",
-            joinColumns = @JoinColumn(name="person_id"),
-            inverseJoinColumns = @JoinColumn(name="role_id")
+            joinColumns = @JoinColumn(name = "person_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
     )
-    private Set<Role> roleSet= new HashSet();
+    private Set<Role> roleSet = new HashSet();
+
+    @ManyToMany
+    @JoinTable(
+            name = "person_group",
+            joinColumns = @JoinColumn(name = "person_id"),
+            inverseJoinColumns = @JoinColumn(name = "groupm_id")
+    )
+    private Set<GroupM> groupList = new HashSet<GroupM>();
+
+    @OneToMany(mappedBy = "person")
+    Set<Payment> payments = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "person_reservation",
+            joinColumns = @JoinColumn(name = "person_id"),
+            inverseJoinColumns = @JoinColumn(name = "reservation_id")
+    )
+    private Set<Reservation> reservations = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -144,10 +163,11 @@ public class Person {
                 ", telephone='" + phone + '\'' +
 
                 ", roleSet=";
-         for (Role s : roleSet) {
-             System.out.println(s);
-               res +=  s + " "; }
-         return res;
+        for (Role s : roleSet) {
+            System.out.println(s);
+            res += s + " ";
+        }
+        return res;
 
     }
 
@@ -181,5 +201,6 @@ public class Person {
     public int hashCode() {
         return Objects.hash(getId(), getCivility(), getFirstName(), getName(), getAddress(), getCity(), getCountry(), getZipCode(), getEmail(), getPhone(), getRoleSet());
     }
+
 }
 

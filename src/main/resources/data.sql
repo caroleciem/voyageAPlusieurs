@@ -14,3 +14,15 @@ insert into trip (id, descriptive_restauration, duration, price_per_pers, destin
 insert into role (id, role_type) values(1,'PAYEUR');
 insert into role (id, role_type) values(2,'ORGANIZER');
 insert into role (id, role_type) values(3,'PARTICIPANT');
+insert into reservation (id, BED_ROOM_NUMBER, GLOBAL_PRICE, date, PENSION_TYPE) values (1,'2', 1000 ,'2020-04-02',1);
+insert into reservation (id, BED_ROOM_NUMBER, GLOBAL_PRICE, date, PENSION_TYPE) values (2,'4', 5000 ,'2020-04-02',1);
+
+insert into reservation (id, BED_ROOM_NUMBER, GLOBAL_PRICE, date, PENSION_TYPE) values (3,'1', 1000 ,'2020-04-02',2);
+insert into reservation (id, BED_ROOM_NUMBER, GLOBAL_PRICE, date, PENSION_TYPE) values (4,'2', 2000 ,'2020-04-02',2);
+
+insert into reservation (id, BED_ROOM_NUMBER, GLOBAL_PRICE, date, PENSION_TYPE) values (5,'4', 4000 ,'2020-04-02',3);
+insert into reservation (id, BED_ROOM_NUMBER, GLOBAL_PRICE, date, PENSION_TYPE) values (6,'8', 8000 ,'2020-04-02',3);
+
+
+
+
