@@ -1,7 +1,10 @@
 package com.simplon.voyageaplusieurs.Model;
+import org.springframework.ui.context.support.ResourceBundleThemeSource;
+
 import java.util.HashSet;
 
 import javax.persistence.*;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -127,7 +130,8 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        String res;
+        res = "Person{" +
                 "id=" + id +
                 ", civility='" + civility + '\'' +
                 ", firstname='" + firstName + '\'' +
@@ -138,8 +142,13 @@ public class Person {
                 ", zipCode=" + zipCode +
                 ", email='" + email + '\'' +
                 ", telephone='" + phone + '\'' +
-                ", roleSet=" + roleSet +
-                '}';
+
+                ", roleSet=";
+         for (Role s : roleSet) {
+             System.out.println(s);
+               res +=  s + " "; }
+         return res;
+
     }
 
     public String getCountry() {
@@ -148,6 +157,29 @@ public class Person {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
+        return Objects.equals(getId(), person.getId()) &&
+                Objects.equals(getCivility(), person.getCivility()) &&
+                Objects.equals(getFirstName(), person.getFirstName()) &&
+                Objects.equals(getName(), person.getName()) &&
+                Objects.equals(getAddress(), person.getAddress()) &&
+                Objects.equals(getCity(), person.getCity()) &&
+                Objects.equals(getCountry(), person.getCountry()) &&
+                Objects.equals(getZipCode(), person.getZipCode()) &&
+                Objects.equals(getEmail(), person.getEmail()) &&
+                Objects.equals(getPhone(), person.getPhone()) &&
+                Objects.equals(getRoleSet(), person.getRoleSet());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getCivility(), getFirstName(), getName(), getAddress(), getCity(), getCountry(), getZipCode(), getEmail(), getPhone(), getRoleSet());
     }
 }
 

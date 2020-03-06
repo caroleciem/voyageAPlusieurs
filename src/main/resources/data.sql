@@ -1,9 +1,16 @@
-insert into destination(id,country,continent,descriptive, situation) values (1,'Chine', 'Asie' ,'Vibrer avec la muraille','près de la ville');
+insert into destination(id,country,continent,descriptive, situation) values (1,'Chine', 'Asie','Vibrer avec la muraille','près de la ville');
 insert into trip (id, descriptive_restauration, duration, price_per_pers, destination_id) values (1, 'trois restaurants', 15, 589, 1);
 insert into trip (id, descriptive_restauration, duration, price_per_pers, destination_id) values (2, 'trois restaurants', 7, 219, 1);
-
 insert into destination(id,country,continent,descriptive, situation) values (2,'Japon', 'Asie' ,'Venez manger des sushis','près du lac');
 insert into trip (id, descriptive_restauration, duration, price_per_pers, destination_id) values (3, 'des beaux kimonos', 15, 728, 2);
-
 insert into destination(id,country,continent,descriptive, situation) values (3,'Italie', 'Europe' ,'Profitez du carnaval','près du lac');
 insert into trip (id, descriptive_restauration, duration, price_per_pers, destination_id) values (4, 'bas les masques', 15, 428, 3);
+insert into destination(id,country,continent,descriptive, situation) values (4,'Pologne', 'Europe','Cracovie, ville de tous les reves','près de la ville');
+insert into trip (id, descriptive_restauration, duration, price_per_pers, destination_id) values (5, 'des pierogis succulents', 10, 228, 4);
+insert into destination(id,country,continent,descriptive, situation) values (5,'Pologne', 'Europe','Varsovie','près de la ville');
+insert into trip (id, descriptive_restauration, duration, price_per_pers, destination_id) values (6, 'des pierogis à foison', 15, 428, 5);
+insert into destination(id,country,continent,descriptive, situation) values (6,'Pérou', 'Amerique','les temples incas','près de la ville');
+insert into trip (id, descriptive_restauration, duration, price_per_pers, destination_id) values (7, 'tout à valonté', 15, 1028, 6);
+insert into role (id, role_type) values(1,'PAYEUR');
+insert into role (id, role_type) values(2,'ORGANIZER');
+insert into role (id, role_type) values(3,'PARTICIPANT');
