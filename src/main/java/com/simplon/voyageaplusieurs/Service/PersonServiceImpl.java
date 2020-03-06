@@ -1,10 +1,13 @@
 package com.simplon.voyageaplusieurs.Service;
 
+import com.simplon.voyageaplusieurs.Model.Payment;
 import com.simplon.voyageaplusieurs.Model.Person;
 import com.simplon.voyageaplusieurs.Repository.PersonRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 
 
 @Service
@@ -25,9 +28,9 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public Person findPersonFromPaymentId(Long paymentId) {
-        Person person = new Person(); //TODO to remove and replace by implementing the query & function
-        return person;
+    public Set<Payment> getPersonPayments(Long personId){
+        Optional<Person> person = personRepository.findById(personId);
+
     }
 
 }

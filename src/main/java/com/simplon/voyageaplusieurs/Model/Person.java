@@ -54,7 +54,7 @@ public class Person {
     private Set<GroupM> groupList = new HashSet<GroupM>();
 
     @OneToMany(mappedBy = "person")
-    Set<Payment> personPaymentSet = new HashSet<>();
+    Set<Payment> payments = new HashSet<>();
 
     @ManyToMany
     @JoinTable(
@@ -62,7 +62,7 @@ public class Person {
             joinColumns = @JoinColumn(name="person_id"),
             inverseJoinColumns = @JoinColumn(name="reservation_id")
     )
-    private Set<Reservation> personReservationSet = new HashSet<>();
+    private Set<Reservation> reservations = new HashSet<>();
 
     public Long getId() {
         return id;

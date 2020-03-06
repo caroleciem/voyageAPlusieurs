@@ -1,5 +1,6 @@
 package com.simplon.voyageaplusieurs.Service;
 
+import com.simplon.voyageaplusieurs.Model.Payment;
 import com.simplon.voyageaplusieurs.Repository.PaymentRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +15,9 @@ public class PaymentServiceImpl implements PaymentService {
     //constructor
     public PaymentServiceImpl(PaymentRepository paymentRepository) {
         this.paymentRepository = paymentRepository;
+    }
+
+    public List<Payment> getPayments(){
+        return paymentRepository.findAll();
     }
 }
