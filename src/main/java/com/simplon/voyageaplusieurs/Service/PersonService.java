@@ -15,6 +15,21 @@ public interface PersonService {
      */
     Person createPerson(Person personToCreate);
 
+    /**
+     * Find a person corresponding to a payment Id
+     * @param paymentId
+     * @return a Person
 
+    Person findPersonFromPaymentId(Long paymentId);
+
+
+    /**
+     * Get the list of payments of a person
+     * @param personId
+     * @return
+
+    Set<Payment> getPersonPayments(Long personId);
+    */
+}
 
 }

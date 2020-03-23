@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.Set;
+import java.util.List;
 
 
 @Service
@@ -25,7 +26,10 @@ public class PersonServiceImpl implements PersonService {
 
         return personRepository.save(personToCreate);
     }
-
+    /*@Override
+    public Set<Payment> getPersonPayments(Long personId){
+        Optional<Person> person = personRepository.findById(personId);
+    */
 
 
 }
