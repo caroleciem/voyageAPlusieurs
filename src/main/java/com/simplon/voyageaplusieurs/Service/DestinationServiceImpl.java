@@ -61,7 +61,7 @@ public class DestinationServiceImpl implements DestinationService {
 
     }
     @Override
-    public List<Country> getCountrys() {
+    public List<String> getCountrys() {
         return destinationRepository.findAllCountry();
 
     }

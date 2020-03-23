@@ -33,7 +33,7 @@ public interface DestinationService {
      * @return the  list filtered from persistence layer.
      **/
 
-    List<Country> getCountrys();
+    List<String> getCountrys();
 
 
 }
