@@ -44,7 +44,7 @@ public class DestinationController {
     }
 
     @GetMapping("/country")
-    public List<Country> getCountrys () {
+    public List<String> getCountrys () {
         return (this.destinationService.getCountrys());
 
     }

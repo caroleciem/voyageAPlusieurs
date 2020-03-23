@@ -13,7 +13,7 @@ public interface DestinationRepository  extends JpaRepository<Destination, Long>
     @Query("SELECT destination FROM Destination destination where destination.country = :country")
     List<Destination> findAllByCountry(String country);
     @Query("SELECT distinct destination.country FROM Destination destination ")
-    List<Country> findAllCountry();
+    List<String> findAllCountry();
 
 
 
