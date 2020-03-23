@@ -1,6 +1,9 @@
 package com.simplon.voyageaplusieurs.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +14,7 @@ public class Destination {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "destination_seq_id")
     private Long id;
     private String continent;
+
     private String country;
     private String descriptive;
     private String situation;
@@ -31,14 +35,6 @@ public class Destination {
 
     public void setContinent(String continent) {
         this.continent = continent;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 
     public String getDescriptive() {
@@ -63,5 +59,14 @@ public class Destination {
 
     public void setTrips(List<Trip> trips) {
         this.trips = trips;
+    }
+
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 }

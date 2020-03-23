@@ -17,20 +17,9 @@ public class GroupM {
     @OneToMany(mappedBy="groupM")
     private List<Reservation> reservations = new ArrayList<>();
 
-    @ManyToMany
-<<<<<<< HEAD
-    private Set<Person> people = new HashSet<>();
-=======
-    @JoinTable(
-            name = "Person",
-            joinColumns = @JoinColumn(name = "groupm_id"),
-            inverseJoinColumns = @JoinColumn(name = "person_id")
-    )
 
-    private List<Person> persons = new ArrayList<>();
-
-
-
+    @ManyToMany(mappedBy = "groupList")
+    private Set<Person> personSet = new HashSet();
 
 
     public Long getId() {
@@ -44,10 +33,11 @@ public class GroupM {
     }
 
 
-    public List<Person> getListPerson() {
-        return persons;
+    public Set<Person> getPersonSet() {
+        return personSet;
     }
 
-
->>>>>>> master
+    public void setPersonSet(Set<Person> personSet) {
+        this.personSet = personSet;
+    }
 }

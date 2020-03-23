@@ -21,10 +21,10 @@ public class Reservation {
    /*
     @OneToOne
     private Trip trip;
-
+*/
     @ManyToOne
     private GroupM groupM;
-*/
+
 
 
     public Long getId() {

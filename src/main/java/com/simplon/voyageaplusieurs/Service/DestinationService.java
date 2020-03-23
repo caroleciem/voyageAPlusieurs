@@ -1,6 +1,8 @@
 package com.simplon.voyageaplusieurs.Service;
 
+import com.simplon.voyageaplusieurs.Model.Country;
 import com.simplon.voyageaplusieurs.Model.Destination;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,15 +11,29 @@ import java.util.List;
 public interface DestinationService {
 
     /**
-     * Get the complete list of Destinations
-     * @return the complete list from persistence layer.
+     * destination list retrieval.
+     *
+     * @param pageNumber the page number to get
+     * @param pageSize   the page size to choose
+     * @param criteria   the sorting criteria
+     * @param direction  the sorting direction
+     * @return a page object with aliments
      */
-    List<Destination> getDestinations();
+    Page<Destination> getDestinations(Integer pageNumber, Integer pageSize, String criteria, String direction);
 
     /**
      * Get the list of Destinations filtered on country and duration
      * @return the  list filtered from persistence layer.
-
+*/
     List<Destination> getDestinationsSelect(String country);
-    */
+
+
+    /**
+     * Get the list of country
+     * @return the  list filtered from persistence layer.
+     **/
+
+    List<Country> getCountrys();
+
+
 }

@@ -19,7 +19,7 @@ public interface PersonService {
      * Find a person corresponding to a payment Id
      * @param paymentId
      * @return a Person
-     */
+
     Person findPersonFromPaymentId(Long paymentId);
 
 
@@ -27,6 +27,9 @@ public interface PersonService {
      * Get the list of payments of a person
      * @param personId
      * @return
-     */
+
     Set<Payment> getPersonPayments(Long personId);
+    */
+
+
 }

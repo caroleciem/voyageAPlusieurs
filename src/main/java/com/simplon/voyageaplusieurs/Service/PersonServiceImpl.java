@@ -5,9 +5,9 @@ import com.simplon.voyageaplusieurs.Model.Person;
 import com.simplon.voyageaplusieurs.Repository.PersonRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.List;
 
 
 @Service
@@ -26,11 +26,10 @@ public class PersonServiceImpl implements PersonService {
 
         return personRepository.save(personToCreate);
     }
-
-    @Override
+    /*@Override
     public Set<Payment> getPersonPayments(Long personId){
         Optional<Person> person = personRepository.findById(personId);
+    */
 
-    }
 
 }
