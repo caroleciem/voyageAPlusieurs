@@ -3,6 +3,7 @@ package com.simplon.voyageaplusieurs.Model;
 import javax.persistence.*;
 import java.util.*;
 
+
 @Entity
 public class Reservation {
     @Id
@@ -14,10 +15,11 @@ public class Reservation {
     private Long id;
     private Long bedRoomNumber;
     private Double globalPrice;
+    @Temporal(TemporalType.DATE)
     private Date date;
    private PensionType pensionType;
 
-    @OneToMany(mappedBy = "reservation")
+     @OneToMany(mappedBy = "reservation")
     Set<Payment> paymentSet = new HashSet<>();
    
     @OneToOne
