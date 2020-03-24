@@ -14,6 +14,7 @@ insert into trip (id, descriptive_restauration, duration, price_per_pers, destin
 insert into role (id, role_type) values(1,'PAYEUR');
 insert into role (id, role_type) values(2,'ORGANIZER');
 insert into role (id, role_type) values(3,'PARTICIPANT');
+/*
 insert into reservation (id, BED_ROOM_NUMBER, GLOBAL_PRICE, date, PENSION_TYPE) values (1,'2', 1000 ,'2020-04-02',1);
 insert into reservation (id, BED_ROOM_NUMBER, GLOBAL_PRICE, date, PENSION_TYPE) values (2,'4', 5000 ,'2020-04-02',1);
 
@@ -22,7 +23,7 @@ insert into reservation (id, BED_ROOM_NUMBER, GLOBAL_PRICE, date, PENSION_TYPE) 
 
 insert into reservation (id, BED_ROOM_NUMBER, GLOBAL_PRICE, date, PENSION_TYPE) values (5,'4', 4000 ,'2020-04-02',3);
 insert into reservation (id, BED_ROOM_NUMBER, GLOBAL_PRICE, date, PENSION_TYPE) values (6,'8', 8000 ,'2020-04-02',3);
-
+*/
 
 /*insert into person(id,address,city,civility,country,email,first_name,name,phone,zip_code) values (1,'10, rue des restaurants','Montreuil','Monsieur','France','prenom.nom@test.com','test-prenom','test-nom','06-12-34-56-67','93100');
 insert into person(id,address,city,civility,country,email,first_name,name,phone,zip_code) values (2,'10, rue des bars','Montreuil','Madame','France','prenom2.nom2@test.com','test-prenom2','test-nom2','06-09-87-65-43','93100');

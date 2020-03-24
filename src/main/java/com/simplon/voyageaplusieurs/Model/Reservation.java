@@ -6,10 +6,11 @@ import java.util.*;
 @Entity
 public class Reservation {
     @Id
-    /*
+    
+
     @SequenceGenerator(name = "reservation_seq_id", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reservation_seq_id")
-    */
+    
     private Long id;
     private Long bedRoomNumber;
     private Double globalPrice;
@@ -18,10 +19,10 @@ public class Reservation {
 
     @OneToMany(mappedBy = "reservation")
     Set<Payment> paymentSet = new HashSet<>();
-   /*
+   
     @OneToOne
     private Trip trip;
-*/
+
     @ManyToOne
     private GroupM groupM;
 
@@ -75,11 +76,7 @@ public class Reservation {
     public void setPaymentSet(Set<Payment> paymentSet) {
         this.paymentSet = paymentSet;
     }
-   /*
-
-  */
-
-/*
+  
     public void setTrip(Trip trip) {
         this.trip = trip;
     }
@@ -90,5 +87,4 @@ public class Reservation {
 
 
 
-        */
 }
