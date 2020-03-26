@@ -40,6 +40,14 @@ public class GroupM {
         this.personSet = personSet;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public List<Reservation> getReservations() {
+        return reservations;
+    }
+
     @Override
     public String toString() {
             String res;
@@ -61,5 +69,6 @@ public class GroupM {
             return res;
 
         }
+
 
 }

@@ -38,6 +38,4 @@ public class ReservationServiceImpl implements ReservationService {
         }
         return ResponseEntity.notFound().build();
     }
-
-
 }

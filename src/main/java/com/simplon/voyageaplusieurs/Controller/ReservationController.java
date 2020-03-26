@@ -16,7 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/reservation")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class ReservationController {
 
     private ReservationService reservationService;
@@ -37,9 +37,9 @@ public class ReservationController {
     }
 
 
-    @PutMapping(value = "/update/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<Reservation> updateReservation(@PathVariable Long id,@RequestBody Reservation reservationToUpdate ) {
-        System.out.println(reservationToUpdate);
+        System.out.println("La reservation a updater est: " + reservationToUpdate);
         ResponseEntity<Reservation> reservationResponse = reservationService.updateReservation(id,reservationToUpdate);
         return reservationResponse;
     }

@@ -4,6 +4,7 @@ import com.simplon.voyageaplusieurs.Model.Payment;
 import com.simplon.voyageaplusieurs.Model.Person;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -14,6 +15,13 @@ public interface PersonService {
      * @return the createdPerson
      */
     Person createPerson(Person personToCreate);
+
+    /**
+     * Return list of Payers of a group
+     * @param groupId
+     * @return
+     */
+    List<Person> getAllPayers(Long groupId);
 
     /**
      * Find a person corresponding to a payment Id

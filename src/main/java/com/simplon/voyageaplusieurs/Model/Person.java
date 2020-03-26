@@ -210,5 +210,40 @@ public class Person {
         return Objects.hash(getId(), getCivility(), getFirstName(), getName(), getAddress(), getCity(), getCountry(), getZipCode(), getEmail(), getPhone(), getRoleSet());
     }
 
+    public Set<GroupM> getGroupList() {
+        return groupList;
+    }
+
+    public void setGroupList(Set<GroupM> groupList) {
+        this.groupList = groupList;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Set<Payment> getPayments() {
+        return payments;
+    }
+
+    public void setPayments(Set<Payment> payments) {
+        this.payments = payments;
+    }
+
+    public Set<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(Set<Reservation> reservations) {
+        this.reservations = reservations;
+    }
 }
 

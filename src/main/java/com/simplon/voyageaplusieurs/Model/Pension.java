@@ -17,4 +17,27 @@ public class Pension {
     private Set<Trip> pensions = new HashSet<>();
 
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public PensionType getPensionType() {
+        return pensionType;
+    }
+
+    public void setPensionType(PensionType pensionType) {
+        this.pensionType = pensionType;
+    }
+
+    public Set<Trip> getPensions() {
+        return pensions;
+    }
+
+    public void setPensions(Set<Trip> pensions) {
+        this.pensions = pensions;
+    }
 }

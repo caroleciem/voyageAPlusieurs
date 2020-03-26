@@ -1,5 +1,6 @@
 package com.simplon.voyageaplusieurs.Controller;
 
+import com.simplon.voyageaplusieurs.Model.Destination;
 import com.simplon.voyageaplusieurs.Model.Person;
 import com.simplon.voyageaplusieurs.Service.PersonService;
 import org.springframework.http.ResponseEntity;
@@ -21,5 +22,11 @@ public class PersonController {
         System.out.println(personToCreate);
         Person savedPerson = personService.createPerson(personToCreate);
         return ResponseEntity.ok(savedPerson);
+    }
+
+    @GetMapping("/group")
+    public List<Person> getAllPayers(@RequestParam Long groupId){
+        return (this.personService.getAllPayers(groupId));
+
     }
 }

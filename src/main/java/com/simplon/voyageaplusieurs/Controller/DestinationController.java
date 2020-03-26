@@ -1,6 +1,5 @@
 package com.simplon.voyageaplusieurs.Controller;
 
-import com.simplon.voyageaplusieurs.Model.Country;
 import com.simplon.voyageaplusieurs.Model.Destination;
 import com.simplon.voyageaplusieurs.Service.DestinationService;
 import io.swagger.annotations.ApiParam;
@@ -42,11 +41,4 @@ public class DestinationController {
         return (this.destinationService.getDestinationsSelect(country));
 
     }
-
-    @GetMapping("/country")
-    public List<String> getCountrys () {
-        return (this.destinationService.getCountrys());
-
-    }
-
 }
