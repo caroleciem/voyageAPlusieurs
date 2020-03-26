@@ -1,6 +1,8 @@
 package com.simplon.voyageaplusieurs.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -17,6 +19,7 @@ public class GroupM {
     @OneToMany(mappedBy="groupM")
     private List<Reservation> reservations = new ArrayList<>();
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "groupList")
     private Set<Person> personSet = new HashSet();
 
@@ -25,11 +28,9 @@ public class GroupM {
     }
 
 
-
-    public List<Reservation> getListReservation() {
-        return reservations;
+    public void setReservations(List<Reservation> reservations) {
+        this.reservations = reservations;
     }
-
 
     public Set<Person> getPersonSet() {
         return personSet;
@@ -60,4 +61,5 @@ public class GroupM {
             return res;
 
         }
-    }
+
+}
