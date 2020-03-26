@@ -2,6 +2,7 @@ package com.simplon.voyageaplusieurs.Service;
 
 
 import com.simplon.voyageaplusieurs.Model.Reservation;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,7 +20,13 @@ public interface ReservationService {
 
   //  void createReservation(Reservation reservation);
 
-
+    /**
+     * Update the reservation toUpdate
+     * @param id
+     * @param reservationToUpdate
+     * @return the updated reservation
+     */
+    ResponseEntity<Reservation> updateReservation(Long id, Reservation reservationToUpdate);
 
 
     /**

@@ -17,10 +17,8 @@ public class GroupM {
     @OneToMany(mappedBy="groupM")
     private List<Reservation> reservations = new ArrayList<>();
 
-
     @ManyToMany(mappedBy = "groupList")
     private Set<Person> personSet = new HashSet();
-
 
     public Long getId() {
         return id;
@@ -40,4 +38,26 @@ public class GroupM {
     public void setPersonSet(Set<Person> personSet) {
         this.personSet = personSet;
     }
-}
+
+    @Override
+    public String toString() {
+            String res;
+            res = "GroupM{" +
+                    "id=" + id +
+                    ", personSet=";
+
+            for (Person s : personSet) {
+                System.out.println(s);
+                res += s + " ";
+            }
+
+            res+=", reservationSet=";
+
+            for (Reservation r : reservations) {
+                System.out.println(r);
+                res += r + " ";
+            }
+            return res;
+
+        }
+    }

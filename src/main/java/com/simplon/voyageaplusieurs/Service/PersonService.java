@@ -10,7 +10,7 @@ import java.util.Set;
 public interface PersonService {
     /**
      * Person creation method.
-     * @param personToCreate the review to create
+     * @param personToCreate the person to create
      * @return the createdPerson
      */
     Person createPerson(Person personToCreate);

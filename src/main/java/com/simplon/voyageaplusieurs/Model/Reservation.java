@@ -87,6 +87,16 @@ public class Reservation {
         this.groupM = groupM;
     }
 
+    @Override
+    public String toString() {
+        String res;
+        res = "Reservation{" +
+                "id=" + id +
+                ", globalPrice=" + globalPrice + '\'' +
+                ", Bedroomnumber='" + bedRoomNumber + '\'' +
+                ", Date='" + date + '\'' +
+                ", PensionType='" + pensionType + "}";
 
-
+         return res;
+    }
 }

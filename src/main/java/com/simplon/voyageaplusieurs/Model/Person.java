@@ -54,7 +54,7 @@ public class Person {
             joinColumns = @JoinColumn(name = "person_id"),
             inverseJoinColumns = @JoinColumn(name = "groupm_id")
     )
-    private Set<GroupM> groupList = new HashSet<GroupM>();
+    private Set<GroupM> groupList = new HashSet();
 
     @OneToMany(mappedBy = "person")
     Set<Payment> payments = new HashSet<>();
