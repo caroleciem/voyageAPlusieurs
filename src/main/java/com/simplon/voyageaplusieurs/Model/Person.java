@@ -167,6 +167,14 @@ public class Person {
             System.out.println(s);
             res += s + " ";
         }
+
+        res+= "GroupList:";
+
+        for (GroupM g : groupList) {
+            System.out.println(g);
+            res += g + " ";
+        }
+
         return res;
 
     }
