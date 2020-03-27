@@ -31,7 +31,6 @@ public class ReservationController {
 
     @PostMapping(value = "/createReservation")
     public ResponseEntity<Reservation> createReservation(@RequestBody Reservation reservationToCreate) {
-        System.out.println(reservationToCreate);
         Reservation savedReservation = reservationService.createReservation(reservationToCreate);
         return ResponseEntity.ok(savedReservation);
     }
@@ -39,33 +38,7 @@ public class ReservationController {
 
     @PutMapping("/update/{id}")
     public ResponseEntity<Reservation> updateReservation(@PathVariable Long id,@RequestBody Reservation reservationToUpdate ) {
-        System.out.println("La reservation a updater est: " + reservationToUpdate);
         ResponseEntity<Reservation> reservationResponse = reservationService.updateReservation(id,reservationToUpdate);
         return reservationResponse;
     }
-
-        //(planet.get()).setPlanetName(planetToUpdate.getPlanetName());
-/*
-
-    @PostMapping(value = "/createReservation")
-    public void createReservation(@RequestBody Reservation reservation) {
-        reservationService.createReservation(reservation);
-    }
-*/
-/*
-    @GetMapping("/filter/{id}")
-    public List<Reservation> FilteredReservation(@PathVariable String id) {
-        System.out.println("idcontroler : " +id);
-        this.reservationService.FilteredReservation(id);
-        return reservationService.FilteredReservation(id);
-    }
-*/
-
-
-/*
-    @GetMapping
-    public List<Reservation> getReservationList(){
-        return (this.reservationService.getReservations());
-    }
-*/
 }
