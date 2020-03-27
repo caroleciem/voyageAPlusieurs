@@ -1,5 +1,7 @@
 package com.simplon.voyageaplusieurs.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.*;
 
@@ -16,7 +18,8 @@ public class Reservation {
     private Date date;
    private PensionType pensionType;
 
-     @OneToMany(mappedBy = "reservation")
+    @JsonIgnore
+    @OneToMany(mappedBy = "reservation")
     Set<Payment> paymentSet = new HashSet<>();
    
     @OneToOne

@@ -16,6 +16,7 @@ public class GroupM {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "group_seq_id")
     private Long id;
 
+    @JsonIgnore
     @OneToMany(mappedBy="groupM")
     private List<Reservation> reservations = new ArrayList<>();
 

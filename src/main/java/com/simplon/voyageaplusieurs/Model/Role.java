@@ -31,7 +31,7 @@ public class Role {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, roleType, personSet);
+        return Objects.hash(id, roleType);
     }
 
     public Long getId() {

@@ -11,9 +11,9 @@ import java.util.List;
 @Repository
 public interface PersonRepository extends JpaRepository<Person, Long> {
 
-    @Query("SELECT p FROM Person p where p.id = :paymentId") //TODO query to update with payment table & payment Id
+    @Query("SELECT p FROM Person p JOIN p.payments PAYMENTS where PAYMENTS.id = :paymentId")
     Person findPersonFromPaymentId(Long paymentId);
 
-    @Query("Select p FROM Person p where p.groupList = :groupId") //TODO to update query to get payers role
+    @Query("Select p FROM Person p JOIN  p.groupList GROUPS JOIN p.roleSet ROLES where GROUPS.id = :groupId and ROLES.roleType = 'PAYEUR' ")
     List<Person> getAllPayers(Long groupId);
 }

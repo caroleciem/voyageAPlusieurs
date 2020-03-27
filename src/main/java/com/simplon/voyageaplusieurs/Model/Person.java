@@ -1,4 +1,5 @@
 package com.simplon.voyageaplusieurs.Model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.ui.context.support.ResourceBundleThemeSource;
 
 import java.util.HashSet;
@@ -59,6 +60,7 @@ public class Person {
     @OneToMany(mappedBy = "person")
     Set<Payment> payments = new HashSet<>();
 
+    @JsonIgnore
     @ManyToMany
     @JoinTable(
             name = "person_reservation",
